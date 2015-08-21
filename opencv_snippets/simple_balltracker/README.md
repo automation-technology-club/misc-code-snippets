@@ -21,4 +21,4 @@ Have a webcam connected and run balltracker.py
 
 ## Credits
 
-Jeremy Yap
+Jeremy Yap https://github.com/jeruyyap
