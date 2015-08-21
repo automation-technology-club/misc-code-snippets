@@ -18,7 +18,3 @@ Have a webcam connected and run balltracker.py
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
-
-## Credits
-
-Jeremy Yap https://github.com/jeruyyap
