@@ -31,7 +31,7 @@ def main():
         cv2.imshow('ball tracker', frame)
         cv2.waitKey(1)
 
-    # remove window
+    # remove existing window
     cv2.destroyAllWindows()
 
 
