@@ -1,15 +1,18 @@
 //Voltage Detection module code
 //http://www.ebay.com/itm/161758492882?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT
 
+//Improved verson of voltage sensor updated by LeRoy Miller Aug 2015
+//This version Displays the raw reading (float) and than a corrected reading
+//that can be used as a rough guess of voltage.
 
-#include <Wire.h>
-int LED1 = 13;
+//Wire Library and LED were not used so they have been removed
+
 int val11;
 int val2;
 
 void setup()
 {
-pinMode(LED1,OUTPUT);
+
 Serial.begin(9600);
 Serial.println("Emartee.Com");
 Serial.println("Voltage: ");
@@ -19,9 +22,12 @@ void loop()
 {
 float temp;
 val11=analogRead(1);
-temp=val11/4.092;
-val11=(int)temp;//
+temp=(val11/4.092)/10;
+val11=(int)temp * 10;//
 val2=((val11%100)/10);
+Serial.print("Raw Reading: ");
+Serial.println(temp);
+Serial.println("Corrected Reading: ");
 Serial.println(val2);
 delay(1000);
 }
